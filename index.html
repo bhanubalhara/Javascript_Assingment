@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Including meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Regristration System for Students" />
+    <meta
+      name="keywords"
+      content="Regristration, Student, System, Student Name, Student Id, Contact No, Email Address"
+    />
+    <meta name="author" content="Bhawana Balhara" />
+    <!-- Title of the project-->
+    <title>Student Registration System</title>
+    <!-- Including CSS file link -->
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Styling of icon insterted in page -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <!-- End of Head Tag and starting of Viewport section -->
+  <body>
+    <!-- Header section Starts here -->
+    <header>
+      <nav>
+        <a href=" "><i class="fa fa-github" id="icon"></i></a>
+      </nav>
+      <h1 id="heading">Student Registration System</h1>
+      <p id="para">
+        To register and store student information such Student Name, Student Id,
+        Contact No, Email Address in proper format and able to delete or modify
+        when needed.
+      </p>
+    </header>
+
+    <!-- Student Registeration From section starts here -->
+    <section class="form-section">
+      <article class="form-container">
+        <!-- Heading of Form -->
+        <h2 class="form_heading">Register Student</h2>
+
+        <!-- Areas to be entered in form -->
+        <form id="studentForm">
+          <label for="studentName">Student Name : </label>
+          <input
+            type="text"
+            id="studentName"
+            placeholder="Jack"
+            required
+            pattern="[A-Za-z]+"
+          />
+          <label for="studentID">Student ID :</label>
+          <input type="number" id="studentID" placeholder="1234" required />
+          <label for="email">Email Address :</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="someone@gmail.com"
+            required
+          />
+          <label for="contactNo">Contact No. :</label>
+          <input
+            type="tel"
+            id="contactNo"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="123-456-7890"
+            required
+          />
+
+          <!-- Submit Button -->
+          <button type="submit">Register</button>
+        </form>
+      </article>
+
+      <!-- Image Container -->
+      <article class="image-container">
+        <img src="Images/student.jpeg" alt="Student_Image" />
+      </article>
+    </section>
+
+    <!-- Registred Student Display Section -->
+    <section class="registered-section">
+      <!-- Heading of Registered Student -->
+      <h2 class="form_heading">Registred Student</h2>
+
+      <!-- Table carring student all information -->
+      <article class="table-container">
+        <table id="studentTable">
+          <!-- Table heading -->
+          <thead>
+            <tr>
+              <th>Student Name</th>
+              <th>Student ID</th>
+              <th>Email Address</th>
+              <th>Contact No.</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- The rows are dynamic it increases and decreases according the updation made -->
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+    <!-- Including Javascript file link -->
+    <script src="index.js"></script>
+  </body>
+</html>
